@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TigrWeb - Logg Inn</title>
+    <link rel="stylesheet" href="Logginn.css">
+</head>
+<body>
+    <div class="topmenu">
+        <a href="Frontpage.html"> Home </a>
+        <a href="Logginn.html">  Logg inn </a>
+        <a class="active" href="Contact.html"> Contact </a>
+        <a href="Work.html">  My Work </a>
+        <a href="Service.html"> Services </a>
+    </div>
+    
+<div class="loggInn">
+        <h1> Hello There! </h1>
+
+        <div class="logg">
+            <h2> Logg Inn </h2>
+
+            <div class="form" id="registerForm">
+                <input type="text" placeholder="Your name" id="name" required>
+
+            <input type="email" placeholder="Your e-mail" id="email" required>
+
+            <input type="password" placeholder="Create a password" id="password" required>
+
+            <input type="password" placeholder="Confirm password" id="confirmPassword" required>
+
+            <button class="submit" type="submit"> Save </button>
+
+            </div>
+            
+            
+        </div>
+    </div> 
+
+    <div class="random"></div>
+
+    <div class="footer">Plan → Design → Build → Launch → Support</div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            const formDiv = document.getElementById('registerForm');
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
+            const confirmInput = document.getElementById('confirmPassword');
+            const saveButton = formDiv.querySelector('button');
+
+            saveButton.addEventListener('click', (event) => {
+                event.preventDefault();
+
+                const name = nameInput.value.trim();
+                const email = emailInput.value.trim();
+                const password = passwordInput.value;
+                const confirmPassword = confirmInput.value;
+
+                if (!name || !email || !password || !confirmPassword) {
+                    alert('Please fill in all the fields.');
+                    return;
+                }
+
+                if (password !== confirmPassword) {
+                    alert('Passwords do not match!');
+                    return;
+                }
+ 
+                
+
+                const client = {
+                    name: name,
+                    email: email,
+                    password: password
+                };
+
+                localStorage.setItem('client', JSON.stringify(client));
+
+                alert('Hello ' + name + '! You are now logged inn.');
+
+                        nameInput.value = '';
+                        emailInput.value = '';
+                        passwordInput.value = '';
+                        confirmInput.value = '';
+
+
+            });
+        });
+
+    </script>
+
+     
+</body>
+</html>

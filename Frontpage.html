@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Frontpage.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> TigrWeb - FrontPage </title>
+</head>
+<body>
+    <div class="topmenu">
+        <a class="active" href="Frontpage.html"> Home </a>
+        <a href="Logginn.html">  Logg inn </a>
+        <a href="Contact.html"> Contact </a>
+        <a href="Work.html">  My Work </a>
+        <a href="Service.html"> Services </a>
+    </div>
+
+    <div class="firstbox">
+        <h1 class="headline"> TigrWeb </h1>
+    </div>
+    
+    <h2> Get your dream WebSite, for your dream business</h2>
+   <a class="btn" href="Contact.html">Lets build your site!</a>
+
+    <div class="footer">Plan → Design → Build → Launch → Support</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (localStorage.getItem('alertShown')) {
+                alert('Welcome to our website! feel free to look around');
+                localStorage.setItem('alertShown', 'true');
+            }
+        });
+    </script>
+</body>
+</html>
