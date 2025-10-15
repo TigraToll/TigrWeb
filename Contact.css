@@ -30,7 +30,7 @@ body {
 }
 
 .topmenu .active{
-    font-size: calc(2vh + 4vw);
+    font-size: calc(2vh + 3vw);
     text-decoration: underline;
 }
 .topmenu a:hover {

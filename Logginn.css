@@ -44,7 +44,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     background-color: rgba(15, 31, 15, 0.5) ;
-    height: 60vh;
+    height: 70vh;
     width: 90vw;
     margin: auto;
     margin-top: 15%;
@@ -57,7 +57,7 @@ h1 {
     
     text-align: center;
     width: 53.5vw;
-    height: 58.5vh;
+    height: 68.5vh;
     background-color: rgb(255, 255, 255, 0.3);
     border-radius: 0px 7px 7px 0px;
 }
@@ -68,10 +68,10 @@ h2{
 }
 
 .form {
-    margin-top: 10vh;
+    margin-top: 5vh;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 5vh;
     width: 45vw;
 }
 
@@ -87,7 +87,7 @@ h2{
 }
 
 .form input::placeholder {
-    color: rgba(15, 31, 15, 0.5);
+    color: rgb(15, 31, 15, 0.5);
 }
 
 .form input:focus{
